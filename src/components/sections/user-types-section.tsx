@@ -1,14 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { 
-  Sparkles, 
-  Users, 
-  Heart, 
-  Briefcase, 
-  Brain, 
-  Smartphone, 
-  GraduationCap, 
+import {
+  Sparkles,
+  Users,
+  Heart,
+  Briefcase,
+  Brain,
+  Smartphone,
+  GraduationCap,
   Calendar,
   Target
 } from "lucide-react"
@@ -126,11 +126,11 @@ export default function UserTypesSection() {
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -166,24 +166,24 @@ export default function UserTypesSection() {
               >
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${userType.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`w-12 h-12 bg-gradient-to-br ${userType.gradient.replace('/20', '/10')} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <userType.icon className={`w-6 h-6 ${userType.iconColor}`} />
                   </div>
-                  
+
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className={`text-lg font-bold text-foreground mb-3 group-hover:${userType.iconColor} transition-colors duration-300`}>
                     {userType.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                     {userType.description}
                   </p>
-                  
+
                   {/* Benefits */}
                   <ul className="space-y-2">
                     {userType.benefits.map((benefit, benefitIndex) => (
@@ -195,9 +195,7 @@ export default function UserTypesSection() {
                       </li>
                     ))}
                   </ul>
-                  
-                  {/* Hover indicator */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150"></div>
+
                 </div>
               </motion.div>
             ))}

@@ -9,7 +9,7 @@ export default function BenefitsSection() {
       icon: TrendingUp,
       title: "Scale Your Revenue",
       description: "Increase your income upto 10x with AI-powered automation, smart funnels, and subscription management.",
-      stats: "Average 500% revenue increase",
+      stats: "Average 5x revenue increase",
       gradient: "from-emerald/20 to-green/20",
       iconBg: "from-emerald/20 to-green/20",
       iconColor: "text-emerald",
@@ -48,10 +48,10 @@ export default function BenefitsSection() {
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(var(--primary)/0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,14 +86,14 @@ export default function BenefitsSection() {
               >
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                
+
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="flex gap-6 items-start">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${benefit.iconBg} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-16 h-16 bg-gradient-to-br ${benefit.iconBg} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-100`}>
                       <benefit.icon className={`w-8 h-8 ${benefit.iconColor} group-hover:text-white transition-colors duration-300`} />
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                         {benefit.title}
@@ -101,12 +101,12 @@ export default function BenefitsSection() {
                       <p className="text-muted-foreground mb-4 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                         {benefit.description}
                       </p>
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
                           {benefit.stats}
                         </div>
-                        
+
                         {/* Hover arrow */}
                         <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
                           <ArrowRight className="w-4 h-4 text-primary" />
@@ -114,17 +114,13 @@ export default function BenefitsSection() {
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Decorative corner element */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150"></div>
                 </div>
               </motion.div>
             ))}
           </div>
-        
+
         </div>
       </div>
     </section>
   )
 }
-  

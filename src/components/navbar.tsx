@@ -67,7 +67,7 @@ export default function Navbar() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium"
+                className="relative text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}

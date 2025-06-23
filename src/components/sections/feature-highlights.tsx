@@ -59,9 +59,6 @@ export default function FeatureHighlights() {
 
   return (
     <section id="features" className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -103,11 +100,6 @@ export default function FeatureHighlights() {
                   <p className="text-muted-foreground leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
                     {feature.description}
                   </p>
-
-                  {/* Hover indicator */}
-                  <div className="absolute bottom-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
                 </div>
               </div>
             ))}
